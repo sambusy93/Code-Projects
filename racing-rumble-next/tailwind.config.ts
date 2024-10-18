@@ -14,10 +14,46 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        logo: ['var(--font-orbitron)']
+      }
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: {
+            background: "#0a0a0a",
+            foreground: "#E6FAFE",
+            divider: "#E69DAA",
+            focus: {
+              DEFAULT: "#F75574",
+              foreground: '#006FEE'
+            },
+            primary: {
+              DEFAULT: '#2D0D88',
+              foreground: '#2D0D88'
+            },
+            secondary: {
+              DEFAULT: '#C5277D',
+              foreground: '#f31260'
+            },
+            success: {
+              DEFAULT: "#193488",
+              foreground: "#17c964"
+            },
+            warning: {
+              DEFAULT: "#B50EA8",
+            },
+            danger: {
+              DEFAULT: "#D54964"
+            }
+          }
+        }
+      }
+  })],
 };
 
 export default config;
